@@ -1,0 +1,39 @@
+# Ignore macOS metadata
+__MACOSX/
+.DS_Store
+
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore VSCode settings and other editor configs
+.vscode/
+.claude/
+.idea/
+
+# Ignore Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+
+# Ignore data and analysis directories
+DataCollector/analysis/
+DataCollector/data/
+DataCollector/mar_feature_data*/
+DataCollector/mirror/
+DataCollector/test_data/
+
+# --- KEEP ONLY THESE ---
+!DataCollector/collectors/**
+!DataCollector/config/**
+!DataCollector/storage/**
+!DataCollector/utils/**
+!DataCollector/*.py
+!DataCollector/README.md
+!DataCollector/requirements.txt
+
+# Ignore everything else in DataCollector by default
+DataCollector/**
