@@ -1,17 +1,8 @@
-# Ignore macOS metadata
+# macOS junk
 __MACOSX/
 .DS_Store
 
-# Ignore virtual environments
-.venv/
-venv/
-
-# Ignore VSCode settings and other editor configs
-.vscode/
-.claude/
-.idea/
-
-# Ignore Python cache and temporary files
+# Python/build junk
 __pycache__/
 *.pyc
 *.pyo
@@ -19,21 +10,42 @@ __pycache__/
 *.log
 *.tmp
 
-# Ignore data and analysis directories
+# Editors / tooling
+.vscode/
+.idea/
+.claude/
+
+# Virtual envs
+.venv/
+venv/
+
+# --- DataCollector rules ---
+
+# 1) Ignore everything under DataCollector
+DataCollector/**
+
+# 2) Re-include the folder itself and ALL files at the top level of DataCollector
+!DataCollector/
+!DataCollector/*
+
+# 3) Ignore unwanted subfolders inside DataCollector
+DataCollector/.vscode/
+DataCollector/.venv/
+DataCollector/__pycache__/
 DataCollector/analysis/
 DataCollector/data/
 DataCollector/mar_feature_data*/
 DataCollector/mirror/
 DataCollector/test_data/
+DataCollector/__MACOSX/
+DataCollector/.DS_Store
 
-# --- KEEP ONLY THESE ---
+# 4) Finally, KEEP these folders (and their contents) inside DataCollector
+!DataCollector/collectors/
 !DataCollector/collectors/**
+!DataCollector/config/
 !DataCollector/config/**
+!DataCollector/storage/
 !DataCollector/storage/**
+!DataCollector/utils/
 !DataCollector/utils/**
-!DataCollector/*.py
-!DataCollector/README.md
-!DataCollector/requirements.txt
-
-# Ignore everything else in DataCollector by default
-DataCollector/**

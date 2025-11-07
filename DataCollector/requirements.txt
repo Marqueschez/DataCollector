@@ -1,0 +1,40 @@
+# Thermodynamic Market Data Collector Dependencies
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=11.0.0
+
+# WebSocket and networking
+websocket-client>=1.5.0
+requests>=2.28.0
+
+# Async and threading (optional, for future enhancements)
+asyncio-throttle>=1.0.0
+
+# Configuration and utilities
+python-dotenv>=1.0.0
+
+# Development and testing (optional)
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Monitoring and metrics (optional)
+psutil>=5.9.0
+
+# Data validation (optional)
+jsonschema>=4.17.0
+
+# Logging enhancements (optional)
+coloredlogs>=15.0.0
+
+tqdm
+numba
+matplotlib
+seaborn
+umap-learn
+hdbscan
+scikit-learn
+scipy
